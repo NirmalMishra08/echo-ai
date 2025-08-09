@@ -9,9 +9,11 @@
         "./convex": "./convex/*.ts"
     },
     "devDependencies": {
+        "@types/node": "^20",
         "typescript": "latest"
     },
     "dependencies": {
+        "@convex-dev/auth": "^0.0.88",
         "convex": "^1.25.4"
     }
 }
