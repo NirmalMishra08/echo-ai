@@ -1,9 +1,13 @@
 import { AuthGuard } from "@/modules/auth/ui/components/authguard"
+import { OrganisationGuard } from "@/modules/auth/ui/components/organisationGuard"
 
- const Layout = ({ children }: { children: React.ReactNode }) => {
+const Layout = ({ children }: { children: React.ReactNode }) => {
     return (
         <AuthGuard>
-            {children}
+            <OrganisationGuard>
+                {children}
+            </OrganisationGuard>
+
         </AuthGuard>
     )
 }
