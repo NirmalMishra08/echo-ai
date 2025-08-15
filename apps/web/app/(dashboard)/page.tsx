@@ -4,7 +4,7 @@ import { api } from "@workspace/backend/_generated/api"
 import { Button } from "@workspace/ui/components/button"
 import { mutation } from "@workspace/backend/_generated/server"
 import { Authenticated, Unauthenticated } from "convex/react"
-import { SignInButton , SignUpButton, UserButton } from "@clerk/nextjs"
+import { OrganizationSwitcher, SignInButton , SignUpButton, UserButton } from "@clerk/nextjs"
 import { LogOut } from "lucide-react"
 
 export default function Page() {
@@ -26,6 +26,7 @@ export default function Page() {
         <div className="flex flex-col items-center justify-center gap-4">
           <h1 className="text-2xl font-bold">app/web</h1>
           <UserButton/>
+          <OrganizationSwitcher hidePersonal/>
           <div className="max-w-sm w-full mx-auto gap-y-4 ">
             <Button onClick={handleAddUser}> Add user </Button>
             <h2 className="text-lg">Users:{JSON.stringify(users, null, 2)}</h2>
